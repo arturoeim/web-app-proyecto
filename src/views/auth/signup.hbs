@@ -1,0 +1,62 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h3>Registro de Usuarios</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/signup" method="POST">
+                        <div class="input-group mb-3">
+                            <input type="text" name="NOMBRE1" placeholder="Nombre 1" class="form-control" autofocus>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="text" name="NOMBRE2" placeholder="Nombre 2" class="form-control">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="text" name="APELLIDO1" placeholder="Apellido 1" class="form-control">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="text" name="APELLIDO2" placeholder="Apellido 2" class="form-control">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="text" name="CEDULA" placeholder="Cédula" class="form-control">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="email" name="CORREO" placeholder="Correo" class="form-control">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="password" name="CONTRASENA" placeholder="Contraseña" class="form-control">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect21">Tipo Usuario</label>
+                            <select class="form-select" id="inputGroupSelect21" name="TIPO">
+                                <option selected>Escoga una opción...</option>
+                                <option value="GENERAL">GENERAL</option>
+                                <option value="ADMIN">ADMIN</option>
+                                <option value="SQ">SQ</option>
+                                <option value="SSO">SSO</option>
+                                <option value="TH">TH</option>
+                                <option value="FINANCIERO">FINANCIERO</option>
+                                
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Registrar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,436 @@
+<h3 class="titulo">Formulario de estudios y experiencia</h3>
+<div class="container2">
+    
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            
+            <form action="/registerpersonal/add2" method="POST" id="formulario" enctype="multipart/form-data">
+                
+                <div class="card">
+
+                    <div class="card-body">
+                        <h6 class="subtitulo2" style="color: brown;">Escriba su cédula para empezar con el formulario</h6>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="addon-wrapping">Cédula de Identidad</span>
+                            <input type="text" class="form-control" id="buscar" placeholder="Cedula" name="cedula" aria-describedby="addon-wrapping" minlength="10" maxlength="10">
+                        </div>
+
+                        <h6 class="subtitulo2">Experiencia en levantamiento</h6>
+
+                        <div class="input-group mb-3" id="pregunta1">
+                            <label class="input-group-text">¿Posee experiencia en el levantamiento de información?</label>
+                            <select class="form-select" style="width: max-content;" id="inputGroupSelect01" name="experiencia" onchange="cargarExperiencia();">
+                                <option value="">Escoja una opción</option>
+                                <option value="1">SI</option>
+                                <option value="0">NO</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-3" id="pregunta2">
+                            <span class="input-group-text">Tiempo de experiencia (años)</span>
+                            <input type="number" class="form-control" id="inputGroupSelect02" name="tiempoexpe" placeholder="Tiempo experiencia en años" max="40">
+                        </div>
+
+                        <div class="input-group mb-3" id="pregunta3">
+                            <label class="input-group-text" for="inputGroupSelect03">Provincia de experiencia</label>
+                            <select class="form-select" id="inputGroupSelect03" name="provinciaexpe" style="width: max-content;">
+                                <option value="">Escoja una provincia</option>
+                                {{#each provincias}}
+                                    <option value="{{COD_PROVINCIA}}">{{DES_PROVINCIA}}</option>
+
+                                {{/each}}
+                            </select>
+                        </div>
+
+                        <h6 class="subtitulo2">Estudios</h6>
+
+                        <div class="input-group mb-3" id="pregunta4">
+                            <label class="input-group-text" for="inputGroupSelect04">Título Bachiller</label>
+                            <select class="form-select" id="inputGroupSelect04" name="titulobachiller">
+                                <option value="">Escoja un titulo</option>
+                                <option value="CIENCIAS">CIENCIAS</option>
+                                <option value="TECNICO">TECNICO</option>
+                                <option value="INTERCULTURAL-BILINGUE">INTERCULTURAL BILINGUE</option>
+                                <option value="ARTES">ARTES</option>
+                                <option value="INTERNACIONAL">INTERNACIONAL</option>
+                                <option value="GENERAL UNIFICADO">GENERAL UNIFICADO</option>
+                               
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-3" id="pregunta5">
+                            <label class="input-group-text" for="inputGroupSelect05">Título Superior</label>
+                            <select class="form-select" id="inputGroupSelect05" name="titulosuperior" style="width: max-content;">
+                                <option value="">Escoja una opción</option>
+                                {{#each titulossup}}
+                                    <option value="{{COD_TITULO}}">{{DES_TITULO}}</option>
+
+                                {{/each}}
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-3" id="pregunta6">
+                            <label class="input-group-text" for="inputGroupSelect06">Idioma 1</label>
+                            <select class="form-select" id="inputGroupSelect06" name="idioma1" style="width: 100%;">
+                                <option value="">Escoja un idioma</option>
+                                
+                                <option value="ESPAÑOL">ESPAÑOL</option>
+                                <option value="INGLES">INGLES</option>
+                                <option value="QUICHUA">QUICHUA</option>
+                                <option value="FRANCES">FRANCES</option>
+                                <option value="ALEMAN">ALEMAN</option>
+                                <option value="ITALIANO">ITALIANO</option>
+                                <option value="PORTUGUES">PORTUGUES</option>
+                                <option value="SUECO">SUECO</option>
+                                <option value="CHINO">CHINO</option>
+                                <option value="JAPONES">JAPONES</option>
+                                <option value="COREANO">COREANO</option>
+                                <option value="PAICOCA">Pueblo Siona y Secoya -PAICOCA</option>
+                                <option value="A'INGAE">Pueblo Cofán - A'INGAE</option>                   
+                                <option value="WAO TERERO">Pueblo Waorani - WAO TERERO</option>
+                                <option value="SHUAR CHICHAM">Pueblo shuar - SHUAR CHICHAM</option>
+                            </select>
+                        </div>
+        
+
+                        <div class="input-group mb-3" id="pregunta7">
+                            <label class="input-group-text" for="inputGroupSelect07">Idioma 2</label>
+                            <select class="form-select" id="inputGroupSelect07" name="idioma2" style="width: 100%;">
+                                <option value="">Escoja un idioma</option>
+                                
+                                <option value="ESPAÑOL">ESPAÑOL</option>
+                                <option value="INGLES">INGLES</option>
+                                <option value="QUICHUA">QUICHUA</option>
+                                <option value="FRANCES">FRANCES</option>
+                                <option value="ALEMAN">ALEMAN</option>
+                                <option value="ITALIANO">ITALIANO</option>
+                                <option value="PORTUGUES">PORTUGUES</option>
+                                <option value="SUECO">SUECO</option>
+                                <option value="CHINO">CHINO</option>
+                                <option value="JAPONES">JAPONES</option>
+                                <option value="COREANO">COREANO</option>
+                                <option value="PAICOCA">Pueblo Siona y Secoya -PAICOCA</option>
+                                <option value="A'INGAE">Pueblo Cofán - A'INGAE</option>                   
+                                <option value="WAO TERERO">Pueblo Waorani - WAO TERERO</option>
+                                <option value="SHUAR CHICHAM">Pueblo shuar - SHUAR CHICHAM</option>
+                                <option value="NINGUNO">NINGUNO</option>
+                                
+                            </select>
+                        </div>
+
+                        <h6 class="subtitulo2">Vacunas</h6>
+
+                        <div class="input-group mb-3" id="pregunta8">
+                            <label class="input-group-text" for="inputGroupSelect08">¿Posee la 1era dósis de la vacuna contra el COVID-19?</label>
+                            <select class="form-select" id="inputGroupSelect08" name="vacunacovid1">
+                                <option value="">Escoja una opción</option>
+                                <option value="1">SI</option>
+                                <option value="0">NO</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-3" id="pregunta9">
+                            <label class="input-group-text" for="inputGroupSelect09">¿Posee la 2da dósis de la vacuna contra el COVID-19?</label>
+                            <select class="form-select" id="inputGroupSelect09" name="vacunacovid2">
+                                <option value="">Escoja una opción</option>
+                                <option value="1">SI</option>
+                                <option value="0">NO</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-3" id="pregunta10">
+                            <label class="input-group-text" for="inputGroupSelect10">¿Posee la 3ra dósis de la vacuna contra el COVID-19?</label>
+                            <select class="form-select" id="inputGroupSelect10" name="vacunacovid3">
+                                <option value="">Escoja una opción</option>
+                                <option value="1">SI</option>
+                                <option value="0">NO</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-3 date" id="pregunta11">
+                            <span class="input-group-text" id="addon-wrapping">Fecha de ultima dósis</span>
+                            <input type="date" class="form-control" id="inputGroupSelect11" name="fechaultimadosis" min="2020-01-01" max="2021-12-31">
+                        </div>
+
+                        <h6 class="subtitulo2" id="texto-documentos">Recuerde subir todos los documentos válidos y actualizados a la fecha del registro</h6>
+
+                        <div class="input-group mb-3" id="pregunta12">
+                            <span class="input-group-text">PDF Título Superior senescyt</span>
+                            <input type="file" class="form-control" id="inputGroupSelect12" name="superiorsenescyt" style="width: max-content;" accept=".pdf">
+                        </div>
+
+                        <div class="input-group mb-3" id="pregunta13">
+                            <span class="input-group-text">PDF Certificado de Trabajo 1</span>
+                            <input type="file" class="form-control" id="inputGroupSelect13" name="trabajo1" style="width: max-content;" accept=".pdf">
+                        </div>
+
+                        <div class="input-group mb-3" id="pregunta14">
+                            <span class="input-group-text">PDF Certificado de Trabajo 2</span>
+                            <input type="file" class="form-control" id="inputGroupSelect14" name="trabajo2" style="width: max-content;" accept=".pdf">
+                        </div>
+ 
+                        <div class="form-group" id="botonfinal">
+                            <button class="btn btn-success btn-block" id="button">
+                                Enviar
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+</div>
+
+<script>
+    $("#inputGroupSelect05").select2({
+        tags: true
+    });
+
+    document.getElementById("pregunta1").style.visibility = "hidden";
+    document.getElementById("pregunta2").style.visibility = "hidden";
+    document.getElementById("pregunta3").style.visibility = "hidden";
+    document.getElementById("pregunta4").style.visibility = "hidden";
+    document.getElementById("pregunta5").style.visibility = "hidden";
+    document.getElementById("pregunta6").style.visibility = "hidden";
+    document.getElementById("pregunta7").style.visibility = "hidden";
+    document.getElementById("pregunta8").style.visibility = "hidden";
+    document.getElementById("pregunta9").style.visibility = "hidden";
+    document.getElementById("pregunta10").style.visibility = "hidden";
+    document.getElementById("pregunta11").style.visibility = "hidden";
+    document.getElementById("pregunta12").style.visibility = "hidden";
+    document.getElementById("pregunta13").style.visibility = "hidden";
+    document.getElementById("pregunta14").style.visibility = "hidden";
+    document.getElementById("botonfinal").style.visibility = "hidden";
+
+
+    var button = document.getElementById('button');
+    button.disabled = true;
+    var busqueda = document.getElementById('buscar');
+
+    buscarCedula = async function(){
+        texto = busqueda.value.toLowerCase();
+        if(texto.length == 10){
+            await fetch('https://sdsconsultores.com/web-miess/verificar_cedulaf2.php?CEDULA='+texto)
+                .then(response => response.json())
+                .then(data => 
+                {
+                    if(data != null){
+                        fetch('https://sdsconsultores.com/web-miess/verificar_cedulaf3.php?CEDULA='+texto)
+                            .then(response => response.json())
+                            .then(data => 
+                            {
+                                if(data !== null){
+                                    document.getElementById("pregunta1").style.visibility = "visible";
+                                    document.getElementById("pregunta4").style.visibility = "visible";
+                                    document.getElementById("pregunta5").style.visibility = "visible";
+                                    document.getElementById("pregunta6").style.visibility = "visible";
+                                    document.getElementById("pregunta7").style.visibility = "visible";
+                                    document.getElementById("pregunta8").style.visibility = "visible";
+                                    document.getElementById("pregunta9").style.visibility = "visible";
+                                    document.getElementById("pregunta10").style.visibility = "visible";
+                                    document.getElementById("pregunta11").style.visibility = "visible";
+                                    document.getElementById("pregunta12").style.visibility = "visible";
+                                    document.getElementById("pregunta13").style.visibility = "visible";
+                                    document.getElementById("pregunta14").style.visibility = "visible";
+                                    document.getElementById("botonfinal").style.visibility = "visible";
+                                    button.disabled = false;
+                                    alert('Usted ya llenó el bloque 1 del formulario sus datos se actualizarán si completa el formulario nuevamente');
+                                    return
+                                    
+                                }else{
+                                    button.disabled = false;
+                                    document.getElementById("pregunta1").style.visibility = "visible";
+                                    document.getElementById("pregunta4").style.visibility = "visible";
+                                    document.getElementById("pregunta5").style.visibility = "visible";
+                                    document.getElementById("pregunta6").style.visibility = "visible";
+                                    document.getElementById("pregunta7").style.visibility = "visible";
+                                    document.getElementById("pregunta8").style.visibility = "visible";
+                                    document.getElementById("pregunta9").style.visibility = "visible";
+                                    document.getElementById("pregunta10").style.visibility = "visible";
+                                    document.getElementById("pregunta11").style.visibility = "visible";
+                                    document.getElementById("pregunta12").style.visibility = "visible";
+                                    document.getElementById("pregunta13").style.visibility = "visible";
+                                    document.getElementById("pregunta14").style.visibility = "visible";
+                                    document.getElementById("botonfinal").style.visibility = "visible";
+                                };
+                            }
+                        );
+
+                    }else{
+                        button.disabled = true;
+                        document.getElementById("pregunta1").style.visibility = "hidden";
+                        document.getElementById("pregunta2").style.visibility = "hidden";
+                        document.getElementById("pregunta3").style.visibility = "hidden"; 
+                        document.getElementById("pregunta4").style.visibility = "hidden";
+                        document.getElementById("pregunta5").style.visibility = "hidden";
+                        document.getElementById("pregunta6").style.visibility = "hidden";
+                        document.getElementById("pregunta7").style.visibility = "hidden";
+                        document.getElementById("pregunta8").style.visibility = "hidden";
+                        document.getElementById("pregunta9").style.visibility = "hidden";
+                        document.getElementById("pregunta10").style.visibility = "hidden";
+                        document.getElementById("pregunta11").style.visibility = "hidden";
+                        document.getElementById("pregunta12").style.visibility = "hidden";
+                        document.getElementById("pregunta13").style.visibility = "hidden";
+                        document.getElementById("pregunta14").style.visibility = "hidden";
+                        document.getElementById("botonfinal").style.visibility = "hidden";
+   
+                        alert('Su cédula no se encuentra registrada en el bloque 1 del formulario');
+                        return 
+                    };
+                }
+            );
+
+
+        }else{
+            button.disabled = true;
+            document.getElementById("pregunta1").style.visibility = "hidden";
+            document.getElementById("pregunta2").style.visibility = "hidden";
+            document.getElementById("pregunta3").style.visibility = "hidden"; 
+            document.getElementById("pregunta4").style.visibility = "hidden";
+            document.getElementById("pregunta5").style.visibility = "hidden";
+            document.getElementById("pregunta6").style.visibility = "hidden";
+            document.getElementById("pregunta7").style.visibility = "hidden";
+            document.getElementById("pregunta8").style.visibility = "hidden";
+            document.getElementById("pregunta9").style.visibility = "hidden";
+            document.getElementById("pregunta10").style.visibility = "hidden";
+            document.getElementById("pregunta11").style.visibility = "hidden";
+            document.getElementById("pregunta12").style.visibility = "hidden";
+            document.getElementById("pregunta13").style.visibility = "hidden";
+            document.getElementById("pregunta14").style.visibility = "hidden";
+            document.getElementById("botonfinal").style.visibility = "hidden";
+   
+        };
+    };
+
+    busqueda.addEventListener('keyup', buscarCedula);
+
+    async function cargarExperiencia(){
+        var experiencia = document.getElementById('inputGroupSelect01');
+        let experienciavalue=experiencia.value;
+        if(experienciavalue=="1"){
+            
+            document.getElementById("pregunta2").style.visibility = "visible";
+            document.getElementById("pregunta3").style.visibility = "visible";
+            
+        }else if(experienciavalue=="0"){
+        
+            document.getElementById("pregunta2").style.visibility = "hidden";
+            document.getElementById("pregunta3").style.visibility = "hidden";     
+        }else{
+            textoExperiencia.textContent="";
+            document.getElementById("pregunta2").style.visibility = "hidden";
+            document.getElementById("pregunta3").style.visibility = "hidden";  
+        }
+
+    };
+
+</script>
+
+<script> 
+
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("formulario").addEventListener('submit', validarFormulario); 
+    });
+
+    async function validarFormulario(evento) {
+        evento.preventDefault();
+        var cedula = document.getElementById('buscar');
+        var pregunta1 = document.getElementById('inputGroupSelect01');
+        var pregunta2 = document.getElementById('inputGroupSelect02');
+        var pregunta3 = document.getElementById('inputGroupSelect03');
+        var pregunta4 = document.getElementById('inputGroupSelect04');
+        var pregunta5 = document.getElementById('inputGroupSelect05');
+        var pregunta6 = document.getElementById('inputGroupSelect06');
+        var pregunta7 = document.getElementById('inputGroupSelect07');
+        var pregunta8 = document.getElementById('inputGroupSelect08');
+        var pregunta9 = document.getElementById('inputGroupSelect09');
+        var pregunta10 = document.getElementById('inputGroupSelect10');
+        var pregunta11 = document.getElementById('inputGroupSelect11');
+        var pregunta12 = document.getElementById('inputGroupSelect12');
+        var pregunta13 = document.getElementById('inputGroupSelect13');
+        var pregunta14 = document.getElementById('inputGroupSelect14');
+        
+
+        var cedulaselec = cedula.value;
+        var respuesta1 = pregunta1.value;
+        var respuesta2 = pregunta2.value;
+        var respuesta3 = pregunta3.value;
+        var respuesta4 = pregunta4.value;
+        var respuesta5 = pregunta5.value;
+        var respuesta6 = pregunta6.value;
+        var respuesta7 = pregunta7.value;
+        var respuesta8 = pregunta8.value;
+        var respuesta9 = pregunta9.value;
+        var respuesta10 = pregunta10.value;
+        var respuesta11 = pregunta11.value;
+        var respuesta12 = pregunta12.value;
+        var respuesta13 = pregunta13.value;
+        var respuesta14 = pregunta14.value;
+
+        if(cedulaselec!="" && respuesta1!="" && respuesta4!=""  && respuesta6!="" && respuesta7!=="" && respuesta8!="" && respuesta9!="" && 
+            respuesta10!="" && respuesta11!=="" && respuesta12!=="" && respuesta13!=="" && respuesta14!==""){
+            
+            if(respuesta6=="NINGUNO" && respuesta7=="NINGUNO"){
+                if(respuesta1=="1"){
+                    if(respuesta2!="" && respuesta3!=""){
+                        var confirmacion1= confirm("¿Desea enviar este registro?");
+                        if(confirmacion1){
+                            this.submit();
+                        }else{
+                            return
+                        }
+                    }else{
+                        alert('Faltan de ingresar el tiempo de experiencia o la provincia de experiencia');
+                        return
+                    }
+                }else{
+                    var confirmacion1= confirm("¿Desea enviar este registro?");
+                    if(confirmacion1){
+                        this.submit();
+                    }else{
+                        return
+                    }
+                }
+            }else{
+                if((respuesta6==respuesta7)){
+            
+                    alert('Los idiomas no se pueden repetir');
+                    return
+                }else{
+                    if(respuesta1=="1"){
+                        if(respuesta2!="" && respuesta3!=""){
+                        var confirmacion1= confirm("¿Desea enviar este registro?");
+                            if(confirmacion1){
+                                this.submit();
+                            }else{
+                                return
+                            }
+                        }else{
+                            alert('Faltan de ingresar el tiempo de experiencia o la provincia de experiencia');
+                            return
+                        }
+                    }else{
+                        var confirmacion1= confirm("¿Desea enviar este registro?");
+                        if(confirmacion1){
+                            this.submit();
+                        }else{
+                            return
+                        }
+                    }
+                    
+                }
+            }
+            
+            
+            
+        }else{
+            alert('Faltan de ingresar datos');
+            return
+        }
+        
+    }
+
+</script>

@@ -1,0 +1,429 @@
+<div class="container2">
+    
+    <div class="row">
+        <div class="col-md-5 mx-auto">
+            
+            <form action="/register/add" method="POST" id="formulario"> 
+                
+                <div class="card">
+
+                    <div class="card-body">
+                        <h4 class="subtitulo2" style="color: brown;">Datos personales del Formulario</h4>
+
+                        <div class="input-group mb-3" id="pregunta1-2">
+                            <span class="input-group-text">Nombres</span>
+                            <input type="text" aria-label="First name" class="form-control" id="inputGroupSelect01" name="nombre1" placeholder="Nombre 1"  onkeyup="javascript:this.value=this.value.toUpperCase();">
+                            <input type="text" aria-label="Last name" class="form-control" id="inputGroupSelect02" name="nombre2" placeholder="Nombre 2" onkeyup="javascript:this.value=this.value.toUpperCase();">
+                        </div>
+
+                        <div class="input-group mb-3" id="pregunta3-4">
+                            <span class="input-group-text">Apellidos</span>
+                            <input type="text" aria-label="First name" class="form-control" id="inputGroupSelect03" name="apellido1" placeholder="Apellido 1" onkeyup="javascript:this.value=this.value.toUpperCase();">
+                            <input type="text" aria-label="Last name" class="form-control" id="inputGroupSelect04" name="apellido2" placeholder="Apellido 2" onkeyup="javascript:this.value=this.value.toUpperCase();">
+                        </div>
+
+
+                        <div class="input-group mb-3" id="pregunta5">
+                            <label class="input-group-text" for="inputGroupSelect05">Zona</label>
+                            <select class="form-select" id="inputGroupSelect05" name="provincia" style="width: max-content;">
+                                <option value="">Escoja una provincia</option>
+
+                                {{#each provincias}}
+                                    <option value="{{COD_PROVINCIA}}">{{DES_PROVINCIA}}</option>
+
+                                {{/each}}
+                                
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-3" id="pregunta6">
+                            <label class="input-group-text" for="inputGroupSelect06">Distrito</label>
+                            <select class="form-select" id="inputGroupSelect06" name="provincia" style="width: max-content;">
+                                <option value="">Escoja una provincia</option>
+
+                                {{#each provincias}}
+                                    <option value="{{COD_PROVINCIA}}">{{DES_PROVINCIA}}</option>
+
+                                {{/each}}
+                                
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-3" id="pregunta7">
+                            <label class="input-group-text" for="inputGroupSelect07">Sexo</label>
+                            <select class="form-select" id="inputGroupSelect07" name="sexo">
+                                <option value="">Escoja una opción</option>
+                                <option value="MASCULINO">MASCULINO</option>
+                                <option value="FEMENINO">FEMENINO</option>
+                                
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-3" id="pregunta8">
+                            <span class="input-group-text">Correo personal</span>
+                            <input type="email" aria-label="email" class="form-control" id="inputGroupSelect08" name="correopersonal" placeholder="Correo">
+                        </div>
+                        
+                        <div class="input-group mb-3 date" id="pregunta9">
+                            <span class="input-group-text" id="addon-wrapping">Fecha de nacimiento</span>
+                            <input type="date" class="form-control" id="inputGroupSelect09" name="fechanacimiento" min="1956-01-01" max="2010-12-31">
+                            
+                        </div>
+
+                        <h4 class="subtitulo2">Preguntas del formulario</h4>
+                        <h4 class="subtitulo2">Para responder las siguientes preguntas use una escala de 6 puntos</h4>
+
+                        <h6 class="subtitulo2">1: Totalmente en desacuerdo, 2: En desacuerdo, 3: Parcialmente en desacuerdo, 4: Parcialmente de acuerdo, 5: De acuerdo, 6: Totalmente de acuerdo</h6>
+
+                        <div class="input-group mb-4" id="pregunta10">
+                            <label class="pregunta" for="inputGroupSelect10">¿Cuando repaso la historia de mi vida estoy contento con cómo han resultado las cosas?</label>
+                            <select class="form-select" id="inputGroupSelect10" name="respuesta1" style="width: 100%;">
+                                <option value="">Escoja</option>
+                                
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+
+                                
+                                
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-4" id="pregunta11">
+                            <label class="pregunta" for="inputGroupSelect11">¿A menudo me siento solo porque tengo pocos amigos íntimos con quienes compartir mis preocupaciones?</label>
+                            <select class="form-select" id="inputGroupSelect11" name="respuesta2" style="width: 100%;">
+                                <option value="">Escoja</option>
+                                
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+
+                                
+                                
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-4" id="pregunta12">
+                            <label class="pregunta" for="inputGroupSelect12">¿No tengo miedo de expresar mis opiniones, incluso cuando son opuestas a las opiniones de la mayoría de la gente?</label>
+                            <select class="form-select" id="inputGroupSelect12" name="respuesta3" style="width: 100%;">
+                                <option value="">Escoja</option>
+                                
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+
+                                
+                                
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-4" id="pregunta13">
+                            <label class="pregunta" for="inputGroupSelect13">¿Me preocupa cómo otra gente evalúa las elecciones que he hecho en mi vida?</label>
+                            <select class="form-select" id="inputGroupSelect13" name="respuesta4" style="width: 100%;">
+                                <option value="">Escoja</option>
+                                
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                
+                                
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-4" id="pregunta14">
+                            <label class="pregunta" for="inputGroupSelect14">¿Me resulta difícil dirigir mi vida hacia un camino que me satisfaga?</label>
+                            <select class="form-select" id="inputGroupSelect14" name="respuesta5" style="width: 100%;">
+                                <option value="">Escoja</option>
+                                
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+
+                                
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-4" id="pregunta15">
+                            <label class="pregunta" for="inputGroupSelect15">¿Disfruto haciendo planes para el futuro y trabajar para hacerlos realidad?</label>
+                            <select class="form-select" id="inputGroupSelect15" name="respuesta6" style="width: 100%;">
+                                <option value="">Escoja</option>
+                                
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+
+                                
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-4" id="pregunta16">
+                            <label class="pregunta" for="inputGroupSelect16">¿En general, me siento seguro y positivo conmigo mismo?</label>
+                            <select class="form-select" id="inputGroupSelect16" name="respuesta7" style="width: 100%;">
+                                <option value="">Escoja</option>
+                                
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+
+                                
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-4" id="pregunta17">
+                            <label class="pregunta" for="inputGroupSelect17">¿No tengo muchas personas que quieran escucharme cuando necesito hablar?</label>
+                            <select class="form-select" id="inputGroupSelect17" name="respuesta8" style="width: 100%;">
+                                <option value="">Escoja</option>
+                                
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+
+                                
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-4" id="pregunta18">
+                            <label class="pregunta" for="inputGroupSelect18">¿Tiendo a preocuparme sobre lo que otra gente piensa de mí?</label>
+                            <select class="form-select" id="inputGroupSelect18" name="respuesta9" style="width: 100%;">
+                                <option value="">Escoja</option>
+                                
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+
+                                
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-4" id="pregunta19">
+                            <label class="pregunta" for="inputGroupSelect19">¿Me juzgo por lo que yo creo que es importante, no por los valores que otros piensan que son importantes?</label>
+                            <select class="form-select" id="inputGroupSelect19" name="respuesta10" style="width: 100%;">
+                                <option value="">Escoja</option>
+                                
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+
+                                
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-4" id="pregunta20">
+                            <label class="pregunta" for="inputGroupSelect20">¿He sido capaz de construir un hogar y un modo de vida a mi gusto?</label>
+                            <select class="form-select" id="inputGroupSelect20" name="respuesta11" style="width: 100%;">
+                                <option value="">Escoja</option>
+                                
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+
+                                
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-4" id="pregunta21">
+                            <label class="pregunta" for="inputGroupSelect21">¿He sido capaz de construir un hogar y un modo de vida a mi gusto?</label>
+                            <select class="form-select" id="inputGroupSelect21" name="respuesta12" style="width: 100%;">
+                                <option value="">Escoja</option>
+                                
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+
+                                
+                            </select>
+                        </div>
+
+                        <div class="form-group" id="botonfinal">
+                            <button class="btn btn-success btn-block" id="button">
+                                Enviar
+                            </button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+</div>
+
+<script>
+    const expression=/[a-zA-Z0-9._-]+\@(gmail.com)$/;
+    function validar_correo(){
+        const correo = document.getElementById('inputGroupSelect08').value;
+        const validar = expression.test(correo);
+        if(validar===true){
+            $('#inputGroupSelect08').removeClass('is-invalid').addClass('is-valid');
+
+        }else{
+           $('#inputGroupSelect08').addClass('is-invalid');
+        }
+
+
+    };
+</script>
+
+<script> 
+
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("formulario").addEventListener('submit', validarFormulario); 
+    });
+
+    async function validarFormulario(evento) {
+        evento.preventDefault();
+        var cedula = document.getElementById('buscar');
+        var pregunta1 = document.getElementById('inputGroupSelect01');
+        var pregunta2 = document.getElementById('inputGroupSelect02');
+        var pregunta3 = document.getElementById('inputGroupSelect03');
+        var pregunta4 = document.getElementById('inputGroupSelect04');
+        var pregunta5 = document.getElementById('inputGroupSelect05');
+        var pregunta6 = document.getElementById('inputGroupSelect06');
+        var pregunta7 = document.getElementById('inputGroupSelect07');
+        var pregunta8 = document.getElementById('inputGroupSelect08');
+        var pregunta9 = document.getElementById('inputGroupSelect09');
+        var pregunta10 = document.getElementById('inputGroupSelect10');
+        var pregunta11 = document.getElementById('inputGroupSelect11');
+        var pregunta12 = document.getElementById('inputGroupSelect12');
+        var pregunta13 = document.getElementById('inputGroupSelect13');
+        var pregunta14 = document.getElementById('inputGroupSelect14');
+        var pregunta15 = document.getElementById('inputGroupSelect15');
+        var pregunta16 = document.getElementById('inputGroupSelect16');
+        var pregunta17 = document.getElementById('inputGroupSelect17');
+        var pregunta18 = document.getElementById('inputGroupSelect18');
+        var pregunta19 = document.getElementById('inputGroupSelect19');
+        var pregunta20 = document.getElementById('inputGroupSelect20');
+        var pregunta21 = document.getElementById('inputGroupSelect21');
+        var pregunta22 = document.getElementById('inputGroupSelect22');
+        var pregunta23 = document.getElementById('inputGroupSelect23');
+        var pregunta24 = document.getElementById('inputGroupSelect24');
+        var pregunta25 = document.getElementById('inputGroupSelect25');
+        var pregunta26 = document.getElementById('inputGroupSelect26');
+        var pregunta27 = document.getElementById('inputGroupSelect27');
+        var pregunta28 = document.getElementById('inputGroupSelect28');
+        var pregunta29 = document.getElementById('inputGroupSelect29');
+        var pregunta30 = document.getElementById('inputGroupSelect30');
+        var pregunta31 = document.getElementById('inputGroupSelect31');
+        var pregunta32 = document.getElementById('inputGroupSelect32');
+
+        var cedulaselec = cedula.value;
+        var respuesta1 = pregunta1.value;
+        var respuesta2 = pregunta2.value;
+        var respuesta3 = pregunta3.value;
+        var respuesta4 = pregunta4.value;
+        var respuesta5 = pregunta5.value;
+        var respuesta6 = pregunta6.value;
+        var respuesta7 = pregunta7.value;
+        var respuesta8 = pregunta8.value;
+        var respuesta9 = pregunta9.value;
+        var respuesta10 = pregunta10.value;
+        var respuesta11 = pregunta11.value;
+        var respuesta12 = pregunta12.value;
+        var respuesta13 = pregunta13.value;
+        var respuesta14 = pregunta14.value;
+        var respuesta15 = pregunta15.value;
+        var respuesta16 = pregunta16.value;
+        var respuesta17 = pregunta17.value;
+        var respuesta18 = pregunta18.value;
+        var respuesta19 = pregunta19.value;
+        var respuesta20 = pregunta20.value;
+        var respuesta21 = pregunta21.value;
+        var respuesta22 = pregunta22.value;
+        var respuesta23 = pregunta23.value;
+        var respuesta24 = pregunta24.value;
+        var respuesta25 = pregunta25.value;
+        var respuesta26 = pregunta26.value;
+        var respuesta27 = pregunta27.value;
+        var respuesta28 = pregunta28.value;
+        var respuesta29 = pregunta29.value;
+        var respuesta30 = pregunta30.value;
+        var respuesta31 = pregunta31.value;
+        var respuesta32 = pregunta32.value;
+
+        const expression=/[a-zA-Z0-9._-]+\@(gmail.com)$/;
+        const correo = document.getElementById('inputGroupSelect11').value;
+        const validar2 = expression.test(correo);
+       
+
+
+
+        if(cedulaselec!="" && respuesta1!="" && respuesta2!="" && respuesta3!="" && 
+            respuesta4!="" && respuesta5!="" && respuesta6!="" && respuesta7!=="" && 
+            respuesta8!="" && respuesta9!="" && respuesta11!=="" && respuesta12!=="" && 
+            respuesta13!="" && respuesta14!="" && respuesta15!=="" && respuesta16!=="" && 
+            respuesta17!="" && respuesta18!="" && respuesta19!="" && respuesta21!=="" && 
+            respuesta24!="" && respuesta26!=="" && respuesta27!=="" && 
+            respuesta28!="" && respuesta29!="" && respuesta30!=="" && respuesta31!=="" && respuesta32!=="" && validar2===true){
+            
+            if(respuesta19==="NINGUNO"){
+                swal({
+                    title: "Confirmación",
+                    text: "¿Desea enviar este registro?",
+                    icon: "info",
+                    buttons: true,
+                    dangerMode: true,
+                    })
+                    .then((willDelete) => {
+                        if (willDelete) {
+                            this.submit();
+                        } else {
+                            return
+                        }
+                    }
+                );
+            }else{
+                if(respuesta20!=""){
+                    swal({
+                        title: "Confirmación",
+                        text: "¿Desea enviar este registro?",
+                        icon: "info",
+                        buttons: true,
+                        dangerMode: true,
+                        })
+                        .then((willDelete) => {
+                            if (willDelete) {
+                                this.submit();
+                            } else {
+                                return
+                            }
+                        }
+                    );
+                }else{
+                    swal("ALERTA","Falta el titulo superior","error" );
+                }
+            
+            }
+            
+            
+        }else{
+            swal("ALERTA","Faltan de ingresar datos, o su correo está incorrecto!","error" );
+            
+        }
+        
+    }
+
+</script>

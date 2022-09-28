@@ -1,0 +1,135 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    
+    <a class="navbar-brand my-auto" href="/"> 
+      <i class="fas fa-book"></i>
+      Proyecto Psicológico
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+            {{#if user}}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Formularios
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                
+                <li class="dropdown-submenu">
+                    <a class="dropdown-item" href="/registerpersonal/add">Bloque 1: Registro de personal</a>
+                    <li><hr class="dropdown-divider"></li>
+                    <a class="dropdown-item" href="/registerpersonal/list">Observar registros</a>
+                    <li><hr class="dropdown-divider"></li>
+                    <a class="dropdown-item" href="/registerpersonal/add3">Vehiculos: Registro de vehículos postulantes</a>
+                    
+                </li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Personal
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                
+                    <li class="dropdown-submenu">
+                        <a class="dropdown-item" href="/personal/list2">Revisar equipos campo</a>
+                        <li><hr class="dropdown-divider"></li>
+                        <a class="dropdown-item" href="/personal/list3">Revisar personal cargos/fechas</a>
+                    
+                    </li>
+                </ul>
+            </li>
+
+          {{#isAdmin user.TIPO_USUARIO}}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Mas opciones
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item" href="/profile">Profile</a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item" href="/signup">Registrar Usuarios</a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item" style="color:hsla(0,100%,50%,0.5);" href="/logout">Logout</a>
+                </li>
+
+            </ul>
+          </li>
+          {{else}}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Mas opciones
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item" href="/profile">Profile</a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item" style="color:rgb(255, 0, 0);" href="/logout">Logout</a>
+                </li>
+
+            </ul>
+          </li>
+          {{/isAdmin}}
+
+
+          {{else}}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Formularios
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              
+              <li class="dropdown-submenu">
+                <a class="dropdown-item" href="/register/add">Formulario 1: Bienestar Psicológico de RYFF</a>
+                <li><hr class="dropdown-divider"></li>
+                <a class="dropdown-item" href="/register/add2">Formulario 2: Examen del Estado Mental</a>
+                
+              </li>
+              
+            </ul>
+
+          </li>
+          <!--<li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Documentacion
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+
+              <li class="dropdown-submenu">
+                <a class="dropdown-item" href="/personal/list4">Revisar roles de pago</a>
+                <li><hr class="dropdown-divider"></li>
+                <a class="dropdown-item" href="/personal/list5">Revisar CERTIFICADOS de CAPACITACION</a>
+                <li><hr class="dropdown-divider"></li>
+                <a class="dropdown-item" href="/personal/list6">Revisar CERTIFICADOS de TRABAJO</a>
+               
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/signin">Acceder</a>
+          </li>-->
+          {{/if}}
+
+        
+      </ul>
+    </div>
+  </div>
+</nav>

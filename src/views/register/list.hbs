@@ -1,0 +1,99 @@
+<h3 class="titulo">Postulantes registrados</h3>
+
+<div class="container3">
+    <h4 class="titulo">Formulario Bloque 1</h4>
+
+    <table id="tabla" class="table table-striped tabla-personal" >
+        <thead>
+            <tr class="table-dark">
+                <th >ID</th>
+                <th >1er Nombre</th>
+                <th >2do Nombre</th>
+                <th >1er Apellido</th>
+                <th >2do Apellido</th>
+                <th >Cedula Postulante</th>
+                <th >Provincia domicilio</th>
+                <th >Cantón domicilio</th>
+                <th >Celular</th>
+                <th >Teléfono</th>
+                <th >Correo</th>
+
+                <th >Fecha de nacimiento</th>
+                <th >Número RUC</th>
+                <th >Titulo Bachiller</th>
+                <th >Titulo Superior</th>
+                <th >Tiempo Experiencia</th>
+
+                <th >PDF Cédula y papeleta</th>
+                <th >PDF título bachiller</th>
+                <th >PDF título superior</th>
+                <th >PDF certificado trabajo 1</th>
+                <th >PDF certificado trabajo 2</th>
+                <th >PDF Vacunas covid</th>
+                <th >PDF certificado bancario</th>
+                <th >PDF RUC habilitado</th>
+                <th >PDF CUMPLIMIENTO TRIBUTARIO</th>
+                <th >JPG FOTO PERFIL</th>
+                <th >PDF NO IMPEDIMENTO LABORAL</th>
+                <th >PDF ANTECEDENTES PENALES</th>
+
+              
+            </tr>
+        </thead>
+        <tbody id="tablebody">
+            {{#each formularios}}
+            <tr>
+                <th>{{ID}}</th>
+                <th>{{NOMBRE1}}</th>
+                <th>{{NOMBRE2}}</th>
+                <th >{{APELLIDO1}}</th>
+                <th >{{APELLIDO2}}</th>
+                <th >{{CEDULA}}</th>
+                <th >{{PROVINCIA_DOMICILIO}}</th>
+                <th >{{CANTON_DOMICILIO}}</th>
+                <th >{{CELULAR}}</th>
+                <th >{{TELEFONO_FIJO}}</th>
+                <th >{{CORREO_PERSONAL}}</th>
+
+                <th >{{FECHA_NACIMIENTO}}</th>
+                <th >{{NUMERO_RUC}}</th>
+                <th >{{TITULO_BACHILLER}}</th>
+                <th >{{DES_TITULO}}</th>
+                <th >{{TIEMPO_EXPERIENCIA}}</th>
+            
+                <th ><a href="{{PDF_CEDULA_PAPELETA}}" target="_blank">PDF_CEDULA_PAPELETA</a></th>
+                <th ><a href="{{PDF_BACHILLER_SENESCYT}}" target="_blank">PDF_BACHILLER_SENESCYT</a></th>
+                <th ><a href="{{PDF_SUPERIOR_SENESCYT}}" target="_blank">PDF_SUPERIOR_SENESCYT</a></th>
+                <th ><a href="{{PDF_CERTIFICADO_TRABA1}}" target="_blank">PDF_CERTIFICADO_TRABA1</a></th>
+                <th ><a href="{{PDF_CERTIFICADO_TRABA2}}" target="_blank">PDF_CERTIFICADO_TRABA2</a></th>
+                <th ><a href="{{PDF_CERTIFICADO_VACUNA_COVID}}" target="_blank">PDF_CERTIFICADO_VACUNA_COVID</a></th>
+                <th ><a href="{{PDF_CUENTA_BANCARIA}}" target="_blank">PDF_CUENTA_BANCARIA</a></th>
+                <th ><a href="{{PDF_RUC_HABILITADO}}" target="_blank">PDF_RUC_HABILITADO</a></th>
+                <th ><a href="{{PDF_CERTIFICADO_FACTURAS}}" target="_blank">PDF_CERTIFICADO_FACTURAS</a></th>
+                <th ><a href="{{JPG_FOTO_PERFIL}}" target="_blank">JPG_FOTO_PERFIL</a></th>
+                <th ><a href="{{PDF_NO_IMPEDIMENTO_LABORAL}}" target="_blank">PDF_NO_IMPEDIMENTO_LABORAL</a></th>
+                <th ><a href="{{PDF_ANTECEDENTES_PENALES}}" target="_blank">PDF_ANTECEDENTES_PENALES</a></th>
+       
+            </tr>
+            {{/each}}
+
+        </tbody>
+    </table>
+       
+</div>
+
+<script src="https://unpkg.com/xlsx@latest/dist/xlsx.full.min.js"></script>
+<script src="https://unpkg.com/file-saverjs@latest/FileSaver.min.js"></script>
+<script src="https://unpkg.com/tableexport@latest/dist/js/tableexport.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.11.3/sc-2.0.5/datatables.min.js"></script>
+
+<script>
+
+   $('#tabla').DataTable({
+        "scrollY": "600px",
+        'iDisplayLength': 100
+        //"scrollCollapse": true,
+    });
+
+
+</script>
